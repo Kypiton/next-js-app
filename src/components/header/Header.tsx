@@ -18,7 +18,7 @@ export default function Header() {
           <Image src='/personal.svg' width={20} height={22} alt='sign in' />
         </Link>
         <Link href='/'>
-          <p className='font-normal text-base'>Особистий кабінет</p>
+          <p className='font-normal text-base text-black'>Особистий кабінет</p>
         </Link>
       </div>
     </header>
