@@ -55,7 +55,7 @@ export const phones = [
 		tel: '3773',
 		width: 10,
 		description: 'Цілодобова підтримка',
-		margin: 7,
+		margin: 'ml-7.5',
 	},
 	{
 		id: 2,
@@ -63,6 +63,6 @@ export const phones = [
 		tel: '8 800 111 22 33',
 		width: 16,
 		description: 'Безкожтовно для дзвінків в межах України',
-		margin: 9,
+		margin: 'ml-9.5',
 	},
 ];

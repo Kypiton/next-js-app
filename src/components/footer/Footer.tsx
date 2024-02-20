@@ -29,7 +29,7 @@ export default function Footer() {
               {phone.tel}
             </a>
           </div>
-          <p className={`ml-${phone.margin}.5 text-gray-400 text-xs font-normal max-w-38`}>
+          <p className={`${phone.margin} text-gray-400 text-xs font-normal max-w-38`}>
             {phone.description}
           </p>
         </div>

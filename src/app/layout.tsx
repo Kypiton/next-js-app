@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Roboto } from 'next/font/google';
-import './globals.css';
+
 import Header from '@/components/header/Header';
 import FirstSection from '@/components/firstSection/FirstSection';
 import Footer from '@/components/footer/Footer';
+import Loading from './loading';
+
+import './globals.css';
 
 const roboto = Roboto({ weight: ['100', '300', '400', '500', '700', '900'], subsets: ['latin'] });
 
@@ -22,7 +26,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Header />
         <FirstSection />
-        {children}
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
       </body>
     </html>
