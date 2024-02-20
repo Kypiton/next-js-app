@@ -10,6 +10,7 @@ export default function Header() {
       <Logo />
       <Navigation
         ml='ml-16'
+        textColor='#0063EB'
         fontWeight='font-normal'
         navProps='flex justify-center items-center gap-12 text-gray-400 text-base font-normal'
       />

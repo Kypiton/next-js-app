@@ -47,3 +47,22 @@ export const icons = [
 		height: 13,
 	},
 ];
+
+export const phones = [
+	{
+		id: 1,
+		text: 'phone',
+		tel: '3773',
+		width: 10,
+		description: 'Цілодобова підтримка',
+		margin: 30,
+	},
+	{
+		id: 2,
+		text: 'handset',
+		tel: '8 800 111 22 33',
+		width: 16,
+		description: 'Безкожтовно для дзвінків в межах України',
+		margin: 37,
+	},
+];

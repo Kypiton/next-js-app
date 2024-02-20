@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navigation from '../ui/Navigation';
 import Logo from '../ui/Logo';
 
-import { icons } from '@/mock/data';
+import { icons, phones } from '@/mock/data';
 
 export default function Footer() {
   return (
@@ -18,29 +18,26 @@ export default function Footer() {
       <div>
         <Navigation
           fontWeight='font-medium'
+          textColor='#9CA3AF'
           navProps='flex flex-col justify-center items-start gap-5 text-gray-400 text-base font-normal'
         />
       </div>
-      <div>
-        <div className='flex justify-start items-center gap-5'>
-          <Image src={`/phone.svg`} width={10} height={16} alt={'phone'} />
-          <a href='tel:3773' className='font-medium text-base text-black'>
-            3773
-          </a>
+      {phones.map(phone => (
+        <div key={phone.id}>
+          <div className='flex justify-start items-center gap-5'>
+            <Image src={`/${phone.text}.svg`} width={phone.width} height={16} alt={phone.text} />
+            <a href={`tel:${phone.tel.replaceAll(' ', '')}`} className='font-medium text-base'>
+              {phone.tel}
+            </a>
+          </div>
+          <p
+            style={{ marginLeft: phone.margin }}
+            className={`text-gray-400 text-xs font-normal max-w-38`}
+          >
+            {phone.description}
+          </p>
         </div>
-        <p className={`ml-7.5 text-gray-400 text-xs font-normal max-w-38`}>Цілодобова підтримка</p>
-      </div>
-      <div>
-        <div className='flex justify-start items-center gap-5'>
-          <Image src={`/handset.svg`} width={16} height={16} alt={'handset phone'} />
-          <a href='tel:88001112233' className='font-medium text-base text-black'>
-            8 800 111 22 33
-          </a>
-        </div>
-        <p className={`ml-9.5 text-gray-400 text-xs font-normal max-w-38`}>
-          Безкожтовно для дзвінків в межах України
-        </p>
-      </div>
+      ))}
       <div>
         <ul className='flex justify-center items-center gap-4'>
           {icons.map(icon => (
