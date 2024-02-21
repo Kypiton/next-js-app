@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Navigation from '../ui/Navigation';
-import Logo from '../ui/Logo';
+import Navigation from '../../components/ui/Navigation';
+import Logo from '../../components/ui/Logo';
 
 export default function Header() {
   return (
