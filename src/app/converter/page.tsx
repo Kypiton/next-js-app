@@ -13,8 +13,8 @@ export default function Converter() {
   const [max, setMax] = useState<string>('');
   const [moneyHave, setMoneyHave] = useState<number>(0);
   const [moneyWantTo, setMoneyWantTo] = useState<number>(0);
-  const [currentCurrency, setCurrentCurrency] = useState<string>('AED');
-  const [changedCurrency, setChangedCurrency] = useState<string>('AFN');
+  const [currentCurrency, setCurrentCurrency] = useState<string>('USD');
+  const [changedCurrency, setChangedCurrency] = useState<string>('UAH');
   const [arr, setArr] = useState<
     Array<{ id: string; date: string; moneyHave: string; moneyWantTo: string }>
   >([]);
@@ -35,7 +35,9 @@ export default function Converter() {
   const month = fullYear.getMonth() + 1;
   const day = fullYear.getDate();
 
-  const curr = Object.keys(data?.conversion_rates || {});
+  const filteredCurrencies = Object.keys(data?.conversion_rates || {}).filter(function (item) {
+    return ['USD', 'UAH', 'RUB', 'EUR', 'GBH', 'CNY'].includes(item);
+  });
 
   useEffect(() => {
     async function fetchData() {
@@ -127,7 +129,7 @@ export default function Converter() {
                   value={currentCurrency}
                   onChange={e => setCurrentCurrency(e.target.value)}
                 >
-                  {curr
+                  {filteredCurrencies
                     .map(item => (
                       <option key={item} value={item}>
                         {item}
@@ -174,7 +176,7 @@ export default function Converter() {
                   value={changedCurrency}
                   onChange={e => setChangedCurrency(e.target.value)}
                 >
-                  {curr
+                  {filteredCurrencies
                     .map(item => (
                       <option key={item} value={item}>
                         {item}
