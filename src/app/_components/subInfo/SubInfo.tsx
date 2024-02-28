@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import Button from '../ui/Button';
 
-export default function SecondSection() {
+export default function SubInfo() {
   return (
     <section className='flex justify-center items-center gap-12 py-30'>
       <div className='flex flex-col justify-center items-start gap-6'>
@@ -13,7 +13,9 @@ export default function SecondSection() {
           більше відсотків.
         </p>
         <Link href='/converter'>
-          <Button btnStyle='bg-blue-700 text-sky-100'>Конвертувати валюту</Button>
+          <Button btnStyle='bg-blue-700 text-sky-100 py-5 px-14 rounded'>
+            Конвертувати валюту
+          </Button>
         </Link>
       </div>
       <Image src='/monobank.svg' width={436} height={314} alt='monobank' />

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Navigation from '../../components/ui/Navigation';
-import Logo from '../../components/ui/Logo';
+import Navigation from '../_components/ui/Navigation';
+import Logo from '../_components/ui/Logo';
 
 export default function Header() {
   return (
@@ -10,7 +10,6 @@ export default function Header() {
       <Logo />
       <Navigation
         ml='ml-16'
-        textColor='#0063EB'
         fontWeight='font-normal'
         navProps='flex justify-center items-center gap-12 text-gray-400 text-base font-normal'
       />

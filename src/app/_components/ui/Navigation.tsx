@@ -9,10 +9,9 @@ interface Nav {
   navProps?: string;
   fontWeight: string;
   ml?: string;
-  textColor: string;
 }
 
-export default function Navigation({ navProps, fontWeight, ml, textColor }: Nav) {
+export default function Navigation({ navProps, fontWeight, ml }: Nav) {
   const path = usePathname();
 
   return (
@@ -25,7 +24,6 @@ export default function Navigation({ navProps, fontWeight, ml, textColor }: Nav)
               className={`hover:text-blue-600 text-base ${fontWeight} ${
                 path === href && 'text-blue-600'
               }`}
-              style={path === href ? { color: `${textColor}` } : { color: '#9CA3AF' }}
             >
               {text}
             </Link>

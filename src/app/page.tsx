@@ -1,9 +1,9 @@
-import SecondSection from '@/components/secondSection/SecondSection';
+import SubInfo from '@/app/_components/subInfo/SubInfo';
 
 export default function Home() {
   return (
     <>
-      <SecondSection />
+      <SubInfo />
     </>
   );
 }

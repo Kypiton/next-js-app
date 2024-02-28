@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Navigation from '../../components/ui/Navigation';
-import Logo from '../../components/ui/Logo';
+import Navigation from '../_components/ui/Navigation';
+import Logo from '../_components/ui/Logo';
 
 import { icons, phones } from '@/mock/data';
 
@@ -18,7 +18,6 @@ export default function Footer() {
       <div>
         <Navigation
           fontWeight='font-medium'
-          textColor='#9CA3AF'
           navProps='flex flex-col justify-center items-start gap-5 text-gray-400 text-base font-normal'
         />
       </div>

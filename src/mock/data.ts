@@ -66,3 +66,54 @@ export const phones = [
 		margin: 37,
 	},
 ];
+
+export const history = [
+	{
+		id: 1,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 2,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 3,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 4,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 5,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 6,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 7,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+	{
+		id: 8,
+		date: '25.11.2020',
+		moneyHave: '1000 UAH',
+		moneyWantTo: '36,65 USD',
+	},
+];

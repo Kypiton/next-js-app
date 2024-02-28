@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   description: 'Обмінник валют - навчальний',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  firstSection,
+  info,
   footer,
   header,
 }: Readonly<{
   children: React.ReactNode;
-  firstSection: React.ReactNode;
+  info: React.ReactNode;
   footer: React.ReactNode;
   header: React.ReactNode;
 }>) {
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang='uk-UA'>
       <body className={roboto.className}>
         {header}
-        {firstSection}
+        {info}
         <Suspense fallback={<Loading />}>{children}</Suspense>
         {footer}
       </body>
