@@ -35,8 +35,10 @@ export default function Converter() {
   const month = fullYear.getMonth() + 1;
   const day = fullYear.getDate();
 
+  console.log(Object.keys(data?.conversion_rates || {}));
+
   const filteredCurrencies = Object.keys(data?.conversion_rates || {}).filter(function (item) {
-    return ['USD', 'UAH', 'RUB', 'EUR', 'GBH', 'CNY'].includes(item);
+    return ['USD', 'UAH', 'RUB', 'EUR', 'GBP', 'CNY'].includes(item);
   });
 
   useEffect(() => {
