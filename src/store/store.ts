@@ -58,7 +58,6 @@ const useConverterStore = create<HandleSubmit>((set, get) => ({
 		}
 	},
 
-
 	submitForm: () => {
 		if (get().arr.length >= 10) get().arr.shift()
 		set((state) => ({
