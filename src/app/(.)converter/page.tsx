@@ -109,6 +109,43 @@ export default function Converter() {
           </main>
         </section>
       </Suspense>
+      <section className='py-20 px-52 bg-white'>
+        <main className='bg-sky-100 pt-10 px-16 pb-14'>
+          <div className='flex justify-between items-center'>
+            <p className='font-medium text-3xl'>Історія конвертації</p>
+            <Button
+              btnStyle='bg-blue-700 text-sky-100 py-5 px-14 rounded'
+              onClick={data.handleClick}
+            >
+              Очистити історію
+            </Button>
+          </div>
+          {!data.arr.length && (
+            <p className='font-medium text-3xl py-6 px-8 text-center border-white'>
+              Історія конвертації відсутня
+            </p>
+          )}
+          <div className='grid grid-cols-2 gap-y-4 gap-x-12 mt-8'>
+            {data.arr.map((item: any) => (
+              <div
+                key={item.id}
+                className='flex justify-center items-center gap-5 p-4 bg-white rounded'
+              >
+                <p className='font-normal text-lg text-gray-300'>{item.date}</p>
+                <p className='font-normal text-lg text-gray-400'>{item.moneyHave}</p>
+                <Image
+                  src='/arrowToRight.svg'
+                  width={14}
+                  height={10}
+                  alt='arrow'
+                  className='w-auto'
+                />
+                <p className='font-normal text-lg text-gray-400'>{item.moneyWantTo}</p>
+              </div>
+            ))}
+          </div>
+        </main>
+      </section>
     </>
   );
 }
